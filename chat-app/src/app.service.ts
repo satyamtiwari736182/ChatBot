@@ -8,6 +8,9 @@ export class AppService {
   getHello(): string {
     return "Hello World!";
   }
+  async delay(): Promise<any> {
+    setTimeout(() => {}, 5000);
+  }
   async getReply(msg: string): Promise<string> {
     const delayedOperation = () =>
       new Promise<string>((resolve) => {
